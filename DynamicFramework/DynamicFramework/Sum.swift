@@ -14,4 +14,14 @@ final public class DynamicFramework {
     public func sum(_ first: Int, second: Int) -> Int {
         return first + second
     }
+
+    @usableFromInline
+    func square(_ a: Int) -> Int {
+        return a*a
+    }
+
+    @inlinable
+    func cube(_ a: Int) -> Int {
+        return square(a) * a
+    }
 }

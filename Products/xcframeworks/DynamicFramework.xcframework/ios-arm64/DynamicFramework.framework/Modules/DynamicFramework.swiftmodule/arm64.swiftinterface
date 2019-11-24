@@ -6,5 +6,10 @@ import Swift
 final public class DynamicFramework {
   public init()
   final public func sum(_ first: Swift.Int, second: Swift.Int) -> Swift.Int
+  @usableFromInline
+  final internal func square(_ a: Swift.Int) -> Swift.Int
+  @inlinable final internal func cube(_ a: Swift.Int) -> Swift.Int {
+        return square(a) * a
+    }
   @objc deinit
 }
