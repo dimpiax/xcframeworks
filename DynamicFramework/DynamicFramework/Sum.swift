@@ -8,9 +8,13 @@
 // DEFINES MODULE == YES
 
 import Foundation
+import HiddenModule
 
 final public class DynamicFramework {
-    public init() {}
+    public init() {
+      print(HiddenModule.echo())
+    }
+  
     public func sum(_ first: Int, second: Int) -> Int {
         return first + second
     }

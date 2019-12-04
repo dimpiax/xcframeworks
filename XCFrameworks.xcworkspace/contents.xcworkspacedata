@@ -10,4 +10,7 @@
    <FileRef
       location = "group:DynamicFramework/DynamicFramework.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:HiddenModule/HiddenModule.xcodeproj">
+   </FileRef>
 </Workspace>

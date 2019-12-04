@@ -12,6 +12,8 @@
 		21D711FF22C1762800D62E4E /* DynamicFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 21D711F122C1762800D62E4E /* DynamicFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21D7120922C179A500D62E4E /* Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D7120822C179A500D62E4E /* Sum.swift */; };
 		21D7125C22C185AF00D62E4E /* Package in Frameworks */ = {isa = PBXBuildFile; productRef = 21D7125B22C185AF00D62E4E /* Package */; };
+		F088A34C239736A40041A977 /* HiddenModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F088A3492397364C0041A977 /* HiddenModule.framework */; };
+		F088A34D239736A40041A977 /* HiddenModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F088A3492397364C0041A977 /* HiddenModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +24,28 @@
 			remoteGlobalIDString = 21D711ED22C1762800D62E4E;
 			remoteInfo = DynamicFramework;
 		};
+		F088A3482397364C0041A977 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F088A3442397364C0041A977 /* HiddenModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F088A338239736370041A977;
+			remoteInfo = HiddenModule;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F088A34E239736A40041A977 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F088A34D239736A40041A977 /* HiddenModule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		21D711EE22C1762800D62E4E /* DynamicFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +57,7 @@
 		21D7120822C179A500D62E4E /* Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sum.swift; sourceTree = "<group>"; };
 		21D7120A22C17A6700D62E4E /* Package */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Package; path = ../../Package; sourceTree = "<group>"; };
 		21EB00D822E45FD200AD9B3F /* XCFrameworks.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = XCFrameworks.xcconfig; path = ../XCFrameworks.xcconfig; sourceTree = "<group>"; };
+		F088A3442397364C0041A977 /* HiddenModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HiddenModule.xcodeproj; path = ../HiddenModule/HiddenModule.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F088A34C239736A40041A977 /* HiddenModule.framework in Frameworks */,
 				21D7125C22C185AF00D62E4E /* Package in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +87,7 @@
 				21EB00D822E45FD200AD9B3F /* XCFrameworks.xcconfig */,
 				21D711F022C1762800D62E4E /* DynamicFramework */,
 				21D711FB22C1762800D62E4E /* DynamicFrameworkTests */,
+				F088A3432397363F0041A977 /* Dependencies */,
 				21D711EF22C1762800D62E4E /* Products */,
 				21D7125A22C185AF00D62E4E /* Frameworks */,
 			);
@@ -103,6 +129,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F088A3432397363F0041A977 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				F088A3442397364C0041A977 /* HiddenModule.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		F088A3452397364C0041A977 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F088A3492397364C0041A977 /* HiddenModule.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -125,6 +167,7 @@
 				21D711EA22C1762800D62E4E /* Sources */,
 				21D711EB22C1762800D62E4E /* Frameworks */,
 				21D711EC22C1762800D62E4E /* Resources */,
+				F088A34E239736A40041A977 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,6 +229,12 @@
 			mainGroup = 21D711E422C1762800D62E4E;
 			productRefGroup = 21D711EF22C1762800D62E4E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F088A3452397364C0041A977 /* Products */;
+					ProjectRef = F088A3442397364C0041A977 /* HiddenModule.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				21D711ED22C1762800D62E4E /* DynamicFramework */,
@@ -193,6 +242,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F088A3492397364C0041A977 /* HiddenModule.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HiddenModule.framework;
+			remoteRef = F088A3482397364C0041A977 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		21D711EC22C1762800D62E4E /* Resources */ = {
